@@ -1,0 +1,83 @@
+/* Contenedor de la galería */
+.surfaces-slider.surfaces {
+    list-style: none;
+    padding: 25px;
+    max-width: 100%;
+    display: flex;
+    gap: 1%;
+    margin: 0 auto;
+    overflow: hidden; /* Ocultar la barra de desplazamiento */
+    scroll-behavior: smooth; /* Deslizamiento suave */
+    position: relative;
+}
+
+/* Flechas de navegación */
+.arrow {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgb(255, 255, 255);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 10;
+}
+
+.arrow.left {
+    left: 10px;
+}
+
+.arrow.right {
+    right: 10px;
+}
+
+/* Ocultar subtítulo extra */
+.surfaces-slider.surfaces .surface h4 {
+    position: absolute;
+    padding-left: 100%;
+   
+}
+
+/* Posicionar título centrado en la imagen */
+.surfaces-slider.surfaces .surface {
+    position: relative;
+    flex-shrink: 0;
+    width: calc((100% - 2% * 2) / 3); /* Ajuste para mostrar 3 elementos con gaps */
+}
+
+.surfaces-slider.surfaces .surface img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Posicionamos el span del título dentro de la imagen */
+.surfaces-slider.surfaces .surface a {
+    position: relative;
+    text-align: none;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.surfaces-slider.surfaces .surface a span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Ajustes para dispositivos más grandes */
+@media screen and (min-width: 769px) {
+    .surfaces-slider.surfaces {
+        padding-bottom: 2.5em;
+    }
+}
+
